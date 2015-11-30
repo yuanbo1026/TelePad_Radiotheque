@@ -1,0 +1,79 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.        -->
+    </style>
+
+    <style name="defaultTheme" parent="AppBaseTheme">
+        <item name="android:actionBarStyle">@style/defaultActionBar</item>
+        <item name="android:windowBackground">@color/action_bar_bg</item>
+        <item name="android:actionBarSize">82dp</item>
+    </style>
+
+    <style name="defaultActionBar" parent="@android:style/Widget.Holo.Light.ActionBar">
+        <item name="android:background">@color/action_bar_bg</item>
+        <item name="android:displayOptions">useLogo</item>
+        <item name="android:selectableItemBackground">@color/action_bar_pressed_bg</item>
+    </style>
+
+    <!-- Application theme. -->
+    <style name="GreenTheme" parent="AppBaseTheme">
+
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+        <item name="android:actionBarSize">82dp</item>
+        <item name="android:icon">@drawable/logo_actionbar</item>
+        <item name="android:actionBarStyle">@style/GreenActionBar</item>
+        <item name="android:actionOverflowButtonStyle">@style/RadiothekMenuIcon</item>
+        <item name="android:actionBarItemBackground">@drawable/actionbar_item_background_selector</item>
+    </style>
+
+    <style name="GreenActionBar" parent="@android:style/Widget.Holo.Light.ActionBar">
+        <item name="android:background">@color/action_bar_bg</item>
+        <item name="android:icon">@drawable/logo_actionbar</item>
+        <item name="android:displayOptions">showHome|useLogo</item>
+        <item name="android:selectableItemBackground">@color/action_bar_pressed_bg</item>
+    </style>
+
+    <style name="RadiothekMenuIcon" parent="android:style/Widget.Holo.ActionButton.Overflow">
+        <item name="android:src">@drawable/ic_actionbar_menu</item>
+    </style>
+
+    <style name="PrefTheme">
+        <item name="android:windowBackground">@color/Grid_Item_country</item>
+        <item name="android:textColor">@color/RadiothekWhite</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:actionBarStyle">@style/GreenActionBar</item>
+    </style>
+
+    <style name="InvertTheme" parent="AppBaseTheme">
+        <item name="android:actionBarSize">82dp</item>
+        <item name="android:icon">@drawable/logo_actionbar</item>
+        <item name="android:actionBarStyle">@style/InvertActionBar</item>
+        <item name="android:actionOverflowButtonStyle">@style/RadiothekMenuIcon</item>
+        <item name="android:actionBarItemBackground">@drawable/ivt_actionbar_item_background_selector</item>
+    </style>
+
+    <style name="InvertActionBar" parent="@android:style/Widget.Holo.Light.ActionBar">
+        <item name="android:background">@color/ivt_action_bar_bg</item>
+        <item name="android:icon">@drawable/logo_actionbar</item>
+        <item name="android:displayOptions">showHome|useLogo</item>
+        <item name="android:selectableItemBackground">@color/ivt_action_bar_pressed_bg</item>
+    </style>
+
+   
+     <style name="SearchViewTextAppearance" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/searchview_button_color</item>
+        <item name="android:textColorHighlight">@color/RealWhite</item>
+        <item name="android:textColorHint">@color/RealWhite</item>
+        <item name="android:textColorLink">@color/RealWhite</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">normal</item>
+	</style>
+</resources>

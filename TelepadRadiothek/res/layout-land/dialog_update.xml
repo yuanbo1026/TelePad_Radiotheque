@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/AppStockTransparentBlue" >
+
+    <LinearLayout
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@color/Grid_Item_genre"
+        android:orientation="vertical"
+        android:padding="15dp" >
+
+        <TextView
+            android:id="@+id/tv_update_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:weightSum="2"
+            android:layout_marginBottom="5dp"
+            android:lineSpacingMultiplier="1"
+            android:text="@string/appstock_update_title"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="20sp"
+            android:textColor="@color/RadiothekWhite" />
+
+        <TextView
+            android:id="@+id/tv_current_version_code_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="25dp"
+            android:paddingRight="25dp"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/RadiothekGrey" 
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/tv_lastest_version_code_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="5dp"
+            android:paddingLeft="25dp"
+            android:paddingRight="25dp"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/RadiothekGrey" 
+            android:visibility="gone"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:weightSum="2" >
+
+            <Button
+                android:id="@+id/btn_no_update"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="7dp"
+                android:layout_weight="1"
+                android:background="@drawable/station_list_item_bg_seletor"
+                android:gravity="center"
+                android:padding="5dp"
+                android:focusable="true"
+                android:text="@string/appstock_update_cancel"
+                android:textColor="@drawable/general_text_color">
+            </Button>
+
+            <Button
+                android:id="@+id/btn_update"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7dp"
+                android:layout_weight="1"
+                android:background="@drawable/station_list_item_bg_seletor"
+                android:gravity="center"
+                android:padding="5dp"
+                android:focusable="true"
+                android:text="@string/appstock_update_update"
+                android:textColor="@drawable/general_text_color" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/update_spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="invisible" />
+
+</RelativeLayout>

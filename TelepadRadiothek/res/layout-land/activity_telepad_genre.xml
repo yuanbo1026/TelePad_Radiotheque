@@ -1,0 +1,43 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!-- Used for better performance and size portions -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <!-- Slideshow horz gridview single row -->
+
+    <com.jess.ui.TwoWayGridView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/telepad_genre_gridview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="fill_horizontal"
+        android:layout_weight="1"
+        android:background="@color/Grid_Item_genre"
+        app:cacheColorHint="#E8E8E8"
+        app:gravity="fill_horizontal"
+        app:horizontalSpacing="0dp"
+        app:scrollDirectionLandscape="horizontal"
+        app:scrollDirectionPortrait="horizontal"
+        app:stretchMode="columnWidth"
+        app:verticalSpacing="0dp" />
+
+    <ImageView
+        android:id="@+id/genre_back_button"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center_horizontal|bottom"
+        android:focusable="true"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/buttonNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|right"
+        android:text="Next"
+        android:visibility="gone" />
+
+</FrameLayout>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceCategory android:title="@string/setting_style_title" >
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="style"
+            android:summaryOff="@string/setting_style_orange"
+            android:summaryOn="@string/setting_style_green"
+            android:switchTextOff="@string/setting_style_orange"
+            android:switchTextOn="@string/setting_style_green" >
+        </SwitchPreference>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/setting_sort_title" >
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="sort"
+            android:summaryOff="@string/setting_sort_up"
+            android:summaryOn="@string/setting_sort_down"
+            android:switchTextOff="@string/setting_sort_up"
+            android:switchTextOn="@string/setting_sort_down" >
+        </SwitchPreference>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/setting_size_title" >
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="size"
+            android:summaryOff="@string/setting_size_small"
+            android:summaryOn="@string/setting_size_big"
+            android:switchTextOff="@string/setting_size_off"
+            android:switchTextOn="@string/setting_size_on" >
+        </SwitchPreference>
+    </PreferenceCategory>
+    
+    <!--  Preference android:title="Acts like a button"
+                android:key="@string/preference_button"
+                android:summary="This is a cool button"/-->
+
+</PreferenceScreen>

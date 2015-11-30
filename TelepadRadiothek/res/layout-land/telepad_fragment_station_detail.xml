@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/detail_bg"
+    android:orientation="vertical"
+    tools:context=".TelepadStationDetailFragment" >
+
+    <RelativeLayout
+        android:id="@+id/rl_stationdetail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/detail_bg"
+        android:orientation="vertical"
+        tools:context=".TelepadStationDetailFragment" >
+
+        <RelativeLayout
+            android:id="@+id/telepad_stationdetail_player_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|top"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="40dp" >
+
+            <com.technisat.radiotheque.genre.SquareImageView
+                android:id="@+id/telepad_iv_station_cover"
+                android:layout_width="200dp"
+                android:layout_height="150dp"
+                android:layout_centerHorizontal="true"
+                android:background="@color/detail_bg"
+                android:nextFocusDown="@+id/telepad_iv_stationdetail_player_play"
+                android:nextFocusLeft="@+id/telepad_iv_stationdetail_player_backward"
+                android:nextFocusRight="@+id/telepad_iv_stationdetail_player_forward"
+                android:scaleType="fitCenter"
+                android:focusable="false"
+                android:src="@drawable/ic_default_station"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/telepad_iv_stationdetail_player_backward"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_alignBottom="@+id/telepad_iv_stationdetail_player_play"
+                android:layout_marginBottom="50dp"
+                android:layout_toLeftOf="@+id/telepad_iv_stationdetail_player_play"
+                android:layout_toStartOf="@+id/telepad_iv_station_cover"
+                android:background="@color/station_detail_forward_button_bg"
+                android:contentDescription="@null"
+                android:focusable="true"
+                android:nextFocusRight="@+id/telepad_iv_stationdetail_player_forward"
+                android:nextFocusDown="@+id/telepad_iv_stationdetail_player_play"
+                android:src="@drawable/detail_icon_button_playback_icon" />
+  
+            <ImageView
+                android:id="@+id/telepad_iv_stationdetail_player_forward"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_alignBottom="@+id/telepad_iv_stationdetail_player_play"
+                android:layout_marginBottom="50dp"
+                android:layout_toEndOf="@+id/telepad_iv_station_cover"
+                android:layout_toRightOf="@+id/telepad_iv_stationdetail_player_play"
+                android:background="@color/station_detail_forward_button_bg"
+                android:contentDescription="@null"
+                android:focusable="true"
+                android:nextFocusLeft="@+id/telepad_iv_stationdetail_player_backward"
+                android:nextFocusDown="@+id/telepad_iv_stationdetail_player_play"
+                android:src="@drawable/detail_icon_button_playforward_icon" />
+
+            <ImageView
+                android:id="@+id/telepad_iv_stationdetail_player_play"
+                android:layout_width="200dp"
+                android:layout_height="100dp"
+                android:layout_below="@+id/telepad_iv_station_cover"
+                android:layout_centerHorizontal="true"
+                android:background="@color/station_detail_play_button_bg"
+                android:contentDescription="@null"
+                android:focusable="true"
+                android:nextFocusDown="@+id/telepad_iv_stationdetail_function_home"
+                android:nextFocusLeft="@+id/telepad_iv_stationdetail_player_backward"
+                android:nextFocusRight="@+id/telepad_iv_stationdetail_player_forward"
+                android:nextFocusUp="@+id/telepad_iv_station_cover"
+                android:src="@drawable/detail_icon_button_play_icon" />
+
+            <ProgressBar
+                android:id="@+id/telepad_stationd_spinner"
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/telepad_iv_stationdetail_player_forward"
+                android:layout_centerHorizontal="true"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/telepad_stationdetail_information_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/telepad_stationdetail_function_ll"
+            android:layout_below="@+id/telepad_stationdetail_player_rl"
+            android:layout_centerHorizontal="true"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/telepad_tv_stationdetail_item_stationname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:ellipsize="middle"
+                android:maxLength="30"
+                android:gravity="center_horizontal"
+                android:singleLine="true"
+                android:text="Rock Antenne - Bayern"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/RadiothekWhite"
+                android:textSize="40sp" />
+
+            <TextView
+                android:id="@+id/telepad_tv_stationdetail_item_stationgenre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:ellipsize="end"
+                android:maxLength="20"
+                android:singleLine="true"
+                android:text="U2 - Where the streets have"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/station_detail_text_color"
+                android:textSize="35sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/telepad_stationdetail_function_ll"
+            android:layout_width="240dp"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="@color/detail_bg"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/telepad_iv_stationdetail_function_home"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="0dp"
+                android:layout_marginStart="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/detail_icon_button_bg"
+                android:contentDescription="@null"
+                android:focusable="true"
+                android:nextFocusRight="@+id/telepad_iv_stationdetail_function_return"
+                android:nextFocusUp="@+id/telepad_iv_stationdetail_player_play"
+                android:src="@drawable/detail_icon_button_home_bg" />
+
+            <ImageView
+                android:id="@+id/telepad_iv_stationdetail_function_return"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="4dp"
+                android:layout_marginStart="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/detail_icon_button_bg"
+                android:contentDescription="@null"
+                android:focusable="true"
+                android:nextFocusLeft="@+id/telepad_iv_stationdetail_function_home"
+                android:nextFocusRight="@+id/telepad_iv_stationdetail_function_fav"
+                android:nextFocusUp="@+id/telepad_iv_stationdetail_player_play"
+                android:src="@drawable/detail_icon_button_back_bg" />
+
+            <ImageView
+                android:id="@+id/telepad_iv_stationdetail_function_fav"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="4dp"
+                android:layout_marginStart="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/detail_icon_button_bg"
+                android:contentDescription="@null"
+                android:focusable="true"
+                android:nextFocusLeft="@+id/telepad_iv_stationdetail_function_return"
+                android:nextFocusRight="@+id/telepad_iv_stationdetail_function_buy"
+                android:nextFocusUp="@+id/telepad_iv_stationdetail_player_play"
+                android:src="@drawable/detail_icon_button_fav_bg" />
+
+            <ImageView
+                android:id="@+id/telepad_iv_stationdetail_function_buy"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="4dp"
+                android:layout_marginStart="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/detail_icon_button_bg"
+                android:contentDescription="@null"
+                android:focusable="true"
+                android:nextFocusLeft="@+id/telepad_iv_stationdetail_function_fav"
+                android:nextFocusUp="@+id/telepad_iv_stationdetail_player_play"
+                android:src="@drawable/detail_icon_button_basket_bg" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/station_detail_logo"
+            android:layout_width="210dp"
+            android:layout_height="61dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:focusable="false"
+            android:background="@color/detail_bg"
+            android:src="@drawable/logo_player"
+            tools:ignore="ContentDescription" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_fullscreen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/detail_bg"
+        android:orientation="vertical"
+        android:visibility="gone"
+        tools:context=".TelepadStationDetailFragment" >
+
+        <com.technisat.radiotheque.genre.SquareImageView
+            android:id="@+id/fullscreen_cover"
+            android:layout_width="400dp"
+            android:layout_height="400dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="@color/RadiothekBlueDark"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_default_station" />
+
+        <LinearLayout
+            android:id="@+id/fullscreen_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical" >
+  
+            <TextView
+                android:id="@+id/fullscreen_stationname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/playerfragment.text.loading"
+                android:maxLength="30"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/RadiothekWhite"
+                android:textSize="40sp" />
+
+            <TextView
+                android:id="@+id/fullscreen_stationgenre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:ellipsize="end"
+                android:maxLength="20"
+                android:singleLine="true"
+                android:text="@string/playerfragment.text.loading"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/station_detail_text_color"
+                android:textSize="25sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

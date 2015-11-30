@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="700dp"
+    android:layout_height="480dp"
+    android:background="@color/RadiothekWhite"
+    android:orientation="vertical"
+    tools:context="com.technisat.radiotheque.searchview.dialog.SearchViewDialog" >
+
+    <TextView
+        android:id="@+id/searchview_text"
+        android:layout_width="600dp"
+        android:layout_height="230dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal"
+        android:padding="5dp"
+        android:text="Diese Funktion ist nur ohne Ferdbediendung nutzbar."
+        android:textSize="45sp" />
+
+    <CheckBox
+        android:id="@+id/searchview_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:checked="true"
+        android:text="Dialog immer anzeigen"
+        android:textColor="@color/searchview_button_color"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/searchview_ok_button"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="40dp"
+        android:background="#3bc5ab"
+        android:text="OK"
+        android:textColor="@color/RealWhite"
+        android:textSize="50sp"
+        android:textStyle="bold" >
+        <requestFocus />
+    </Button>
+
+</LinearLayout>

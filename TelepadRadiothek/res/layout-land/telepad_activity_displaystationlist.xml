@@ -1,0 +1,63 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DisplayStationListActivity" >
+
+    <LinearLayout
+        android:id="@+id/linlaHeaderProgress"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/Grid_Item_country"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <ProgressBar
+            android:id="@+id/pbHeaderProgress"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone" >
+        </ProgressBar>
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/telepad_lv_displaystationlist_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@color/RadiothekBlueDark"
+        android:dividerHeight="1dp"
+        tools:listitem="@layout/telepad_stationlist_item" >
+    </ListView>
+
+    <TextView
+        android:id="@android:id/empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="@string/radiothek.displaystationlist.text.history"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/RadiothekBlueLight"
+        android:visibility="gone" />
+
+    <!--
+    LinearLayout
+        android:id="@+id/station_list_return_ll"
+        android:layout_width="60dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:focusable="true"
+        android:background="@drawable/station_list_return_button_bg" >
+    </LinearLayout -->
+
+    <ImageView
+        android:id="@+id/station_list_return_button"
+        android:layout_width="60dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:focusable="true" />
+
+</FrameLayout>

@@ -1,0 +1,18 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceCategory
+        android:key="invert_color_key"
+        android:title="set default app style" >
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="invert_color_green"
+            android:summary="invert green style"
+            android:title="invert green style" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="invert_color_pink"
+            android:summary="invert pink style"
+            android:title="invert pink style" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

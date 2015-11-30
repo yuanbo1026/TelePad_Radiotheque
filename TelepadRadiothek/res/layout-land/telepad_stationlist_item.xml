@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="154dp"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:id="@+id/telepad_tv_stationlist_item_linearlayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_gravity="start|center_vertical"
+        android:layout_marginLeft="100dp"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/telepad_tv_stationlist_item_stationname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLength="35"
+            android:text="@string/playerfragment.text.loading"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textSize="40sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/telepad_tv_stationlist_item_stationgenre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLength="25"
+            android:singleLine="true"
+            android:text="@string/playerfragment.text.loading"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textSize="25sp" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/telepad_iv_stationlist_item_favicon"
+        android:layout_width="36dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="end|center_vertical"
+        android:layout_marginRight="45dp"
+        android:contentDescription="@null"
+        android:src="@drawable/station_list_item_icon_fav" />
+
+</RelativeLayout>

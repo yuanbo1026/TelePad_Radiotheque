@@ -1,0 +1,50 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/datenschutz_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/RadiothekBlueDark" >
+
+    <TextView
+        android:id="@+id/datenschutz_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="@string/datenschuttactivity.title"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/RadiothekBlueLight" />
+
+    <View
+        android:id="@+id/datenschutz_divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/datenschutz_title"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:background="@color/RadiothekBlueLight" />
+
+    <ScrollView
+        android:id="@+id/datenschutz_scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@id/datenschutz_title" >
+
+        <TextView
+            android:id="@+id/datenschutz_content"
+            android:layout_width="match_parent"
+            android:layout_height="546dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:text="@string/datenschutzactivity.content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/RadiothekGrey" />
+    </ScrollView>
+
+</RelativeLayout>

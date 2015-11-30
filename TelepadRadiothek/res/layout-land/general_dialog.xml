@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="400dp"
+    android:layout_height="wrap_content"
+    android:background="@color/RadiothekWhite"
+    android:orientation="vertical"
+    tools:context="com.technisat.radiotheque.general.dialog.GeneralDialog" >
+
+    <TextView
+        android:id="@+id/general_text"
+        android:layout_width="300dp"
+        android:layout_height="95dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal"
+        android:padding="5dp"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/general_ok_button"
+        android:layout_width="75dp"
+        android:layout_height="45dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="30dp"
+        android:background="#3bc5ab"
+        android:text="OK"
+        android:textStyle="bold"
+        android:textColor="@color/RealWhite"
+        android:textSize="20sp" />
+
+</LinearLayout>

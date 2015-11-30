@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<preference-headers xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <header
+        android:fragment="com.technisat.radiotheque.setting.ItemSizeFragment"
+        android:title="Change Item size" >
+    </header>
+    <header
+        android:fragment="com.technisat.radiotheque.setting.InvertColorFragment"
+        android:title="Invert Color" >
+    </header>
+    <header
+        android:fragment="com.technisat.radiotheque.setting.SortFragment"
+        android:title="Sort By" >
+    </header>
+
+</preference-headers>

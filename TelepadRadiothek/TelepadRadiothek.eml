@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component jdk="Android API 21 Platform" jdk_type="Android SDK">
+	<exclude-output/>
+	<contentEntry url="file://$MODULE_DIR$"/>
+	<lib name="commons-codec-1.9.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/TelepadRadiothek/aws/commons-codec-1.9.jar!/"/>
+	</lib>
+	<lib name="javax.jws-1.0.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/TelepadRadiothek/aws/javax.jws-1.0.jar!/"/>
+	</lib>
+	<lib name="javax.xml.bind.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/TelepadRadiothek/aws/javax.xml.bind.jar!/"/>
+	</lib>
+	<lib name="jaxws-api.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/TelepadRadiothek/aws/jaxws-api.jar!/"/>
+	</lib>
+	<levels>
+		<level name="android-support-v4" value="project"/>
+	</levels>
+</component>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center_vertical"
+    android:minHeight="?android:attr/listPreferredItemHeight"
+    android:paddingRight="?android:attr/scrollbarSize" 
+    android:background="@color/Grid_Item_country"
+    android:orientation="vertical">
+
+        <CheckBox
+            android:id="@+id/big"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" 
+            android:text="item size big"
+            android:textColor="@color/RealWhite"/>
+
+        <CheckBox
+            android:id="@+id/small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" 
+            android:text="item size small"
+            android:textColor="@color/RealWhite"/>
+
+
+  
+
+</LinearLayout>

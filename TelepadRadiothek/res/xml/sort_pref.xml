@@ -1,0 +1,18 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceCategory
+        android:key="sort_key"
+        android:title="set default sort order">
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="sort_key_up"
+            android:summary="sort down"
+            android:title="sort up" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="sort_key_down"
+            android:summary="sort down"
+            android:title="sort down" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

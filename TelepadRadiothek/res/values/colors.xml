@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="RadiothekBlueLight">#1abc9c</color>
+    <color name="RadiothekBlueDark">#1e303d</color>
+    <color name="RadiothekBlueLight75">#E61abc9c</color>
+    <color name="RadiothekHighlightColor">#E6b6f5e8</color>
+    <color name="RadiothekGrey">#a1a1a1</color>
+    <color name="RadiothekWhite">#ececec</color>
+    <color name="RealWhite">#fff</color>
+    <color name="IABItemBackground">#eeeeee</color>
+    
+    <color name="AppStockTransparentBlue">#AA00A9B5</color>
+    <color name="AppStockDrawerGreen">#95C11F</color>
+    
+    <!-- Telepad general color -->
+    <color name="detail_bg">#223b4f</color>
+    <color name="detail_function_button_bg">#112433</color>
+    
+    <color name="ivt_detail_bg">#ddc4b0</color>
+    <color name="ivt_detail_function_button_bg">#eedbcc</color>
+    
+    <!-- searchview text color -->
+    <color name="searchview_button_color">#3bc5ab</color>
+    <color name="searchview_text_color">#38c4aa</color>
+
+    <!-- GridView Item Background color -->
+    <color name="Grid_Item_history">#36a998</color>
+    <color name="Grid_Item_favs">#318e84</color>
+    <color name="Grid_Item_genre">#2c7274</color>
+    <color name="Grid_Item_country">#275761</color>
+    <color name="Grid_item_bg_h">#9afde9</color>
+    <color name="Grid_item_text_color">#ffffff</color>
+    <color name="Grid_item_text_color_h">#223b4f</color>
+    
+    <color name="ivt_Grid_Item_history">#c95667</color>
+    <color name="ivt_Grid_Item_favs">#cc6371</color>
+    <color name="ivt_Grid_Item_genre">#ce717b</color>
+    <color name="ivt_Grid_Item_country">#d8a89e</color>
+    <color name="ivt_Grid_item_bg_h">#650216</color>
+    <color name="ivt_Grid_item_text_color">#000000</color>
+    <color name="ivt_Grid_item_text_color_h">#ddc4b0</color>
+
+    <!-- action bar Background color -->
+    <color name="action_bar_bg">#223b4f</color>
+    <color name="action_bar_pressed_bg">#9afde9</color>
+    
+    <color name="ivt_action_bar_bg">#ddc4b0</color>
+    <color name="ivt_action_bar_pressed_bg">#650216</color>
+
+    <!-- drawer item bg color #223b4f 1e303e -->
+    <color name="drawer_listview_bg">#1e303e</color>
+    <color name="drawer_item_bg">#223b4f</color>
+    <color name="drawer_item_bg_pressed">#9afde9</color>
+    
+    <color name="ivt_drawer_listview_bg">#e1cfc1</color>
+    <color name="ivt_drawer_item_bg">#ddc4b0</color>
+    <color name="ivt_drawer_item_bg_pressed">#650216</color>
+
+    <!-- genre list gridview item color array -->
+    <color name="gridview_item_position_0">#36a998</color>
+    <color name="gridview_item_position_1">#2c7274</color>
+    <color name="gridview_item_position_2">#339c8e</color>
+    <color name="gridview_item_position_3">#2a656b</color>
+    <color name="gridview_item_position_4">#318e84</color>
+    <color name="gridview_item_position_5">#275761</color>
+    <color name="gridview_item_position_6">#2e807c</color>
+    <color name="gridview_item_position_7">#244a57</color>
+    <color name="gridview_item_bg_h">#9afde9</color>
+    
+    <color name="ivt_gridview_item_position_0">#d38d8b</color>
+    <color name="ivt_gridview_item_position_1">#c95667</color>
+    <color name="ivt_gridview_item_position_2">#d59a94</color>
+    <color name="ivt_gridview_item_position_3">#cc6371</color>
+    <color name="ivt_gridview_item_position_4">#d8a89e</color>
+    <color name="ivt_gridview_item_position_5">#ce717b</color>
+    <color name="ivt_gridview_item_position_6">#dbb5a8</color>
+    <color name="ivt_gridview_item_position_7">#d17f83</color>
+    <color name="ivt_gridview_item_bg_h">#650216</color>
+
+    <!-- general text color -->
+    <color name="general_text_color">#ffffff</color>
+    <color name="general_text_color_h">#223b4f</color>
+    
+    <color name="ivt_general_text_color">#000000</color>
+    <color name="ivt_general_text_color_h">#ddc4b0</color>
+
+    <!-- station list item bg -->
+    <color name="station_list_item_bg">#244a57</color>
+    <color name="station_list_item_bg_h">#9afde9</color>
+    <color name="station_list_return_button_bg">#CC233e51</color>
+    
+    <color name="ivt_station_list_item_bg">#dbb5a8</color>
+    <color name="ivt_station_list_item_bg_h">#650216</color>
+    <color name="ivt_station_list_return_button_bg">#CCdcc1ae</color>
+    
+
+    <!-- station detail station information text color -->
+    <color name="station_detail_text_color">#38ab9a</color>
+    <color name="ivt_station_detail_text_color">#ca5766</color>
+
+    <!-- station detail button bg color -->
+    <color name="station_detail_forward_button_bg">#2c7274</color>
+    <color name="station_detail_play_button_bg">#3bc5ab</color>
+    
+    <color name="ivt_station_detail_forward_button_bg">#d38d8b</color>
+    <color name="ivt_station_detail_play_button_bg">#c43a54</color>
+
+    <!-- station detail function button bg -->
+    <color name="statiion_detail_function_button_bg">#112433</color>
+    <color name="station_detail_function_button_bg_h">#98fee9</color>
+    
+    <color name="ivt_statiion_detail_function_button_bg">#eedbcc</color>
+    <color name="ivt_station_detail_function_button_bg_h">#650216</color>
+
+</resources>

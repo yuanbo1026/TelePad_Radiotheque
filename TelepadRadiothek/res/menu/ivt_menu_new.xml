@@ -1,0 +1,65 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item
+        android:id="@+id/action_current_play"
+        android:background="@drawable/actionbar_item_background_selector"
+        android:focusable="true"
+        android:icon="@drawable/ivt_actionbar_play_selector"
+        android:orderInCategory="2"
+        android:showAsAction="always"
+        android:title="@string/search_label"/>
+    <!-- item
+        android:id="@+id/action_divider"
+        android:background="@drawable/actionbar_item_background_selector"
+        android:focusable="false"
+        android:checkable="false"
+        android:icon="@drawable/ivt_actionbar_divider_selector"
+        android:orderInCategory="5"
+        android:showAsAction="always"
+        android:title="@string/search_label"/ -->
+    <item
+	    android:id="@+id/action_home"
+	    android:orderInCategory="100"
+        android:title="@string/search_label"
+        android:icon="@drawable/ivt_actionbar_home_selector"
+        android:focusable="true"
+        android:background="@drawable/ivt_actionbar_item_background_selector"
+        android:showAsAction="always|collapseActionView" />
+    
+	<item
+	    android:id="@+id/search"
+	    android:orderInCategory="200"
+        android:title="@string/search_label"
+        android:icon="@drawable/ivt_actionbar_search_selector"
+        android:background="@drawable/ivt_actionbar_item_background_selector"
+        android:showAsAction="always|collapseActionView"
+        android:focusable="true"
+        android:actionViewClass="android.widget.SearchView" />
+	
+	<item
+        android:id="@+id/action_favorites"
+        android:orderInCategory="300"
+        android:showAsAction="always|collapseActionView"
+        android:focusable="true"
+        android:icon="@drawable/ivt_actionbar_fav_selector"
+        android:background="@drawable/ivt_actionbar_item_background_selector"
+        android:title="@string/mainactivity.button.favs"/>
+	
+	<item
+        android:id="@+id/action_genres"
+        android:orderInCategory="400"
+        android:showAsAction="always|collapseActionView"
+        android:focusable="true"
+        android:icon="@drawable/ivt_actionbar_genre_selector"
+        android:background="@drawable/ivt_actionbar_item_background_selector"
+        android:title="@string/mainactivity.button.genre"/>  
+	
+	<item
+        android:id="@+id/action_drawer"
+        android:orderInCategory="500"
+        android:focusable="true"
+        android:showAsAction="always"
+        android:icon="@drawable/ivt_actionbar_menu_selector"
+        android:background="@drawable/ivt_actionbar_item_background_selector"
+        android:title="@string/mainactivity.button.menu"/>
+	
+</menu>

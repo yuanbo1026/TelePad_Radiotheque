@@ -1,0 +1,26 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceCategory
+        android:key="item_size_key_category"
+        android:title="set default station list item size" >
+
+        <!--
+        CheckBoxPreference
+            android:defaultValue="false"
+            android:key="item_size_big"
+            android:summary="item size big"
+            android:title="item size big"
+            />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="item_size_small"
+            android:summary="item size small"
+            android:title="item size small" /
+        -->
+        <Preference
+            android:key="item_size_key"
+            android:layout="@layout/pref_item_size_layout"
+             />
+    </PreferenceCategory>
+
+</PreferenceScreen>
