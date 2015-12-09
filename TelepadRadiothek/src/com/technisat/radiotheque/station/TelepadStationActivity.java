@@ -31,7 +31,7 @@ import com.technisat.telepadradiothek.R;
 
 public class TelepadStationActivity extends FragmentActivity implements OnStationDetailListener, IMediaPlayerBroadcastListener {
 
-	private SquareImageView mCover;
+	private SquareImageView mCover,mFullscreenCover;
 	private ProgressBar mSpinner;
 
 	private MediaPlayerBroadcastReceiver mBroadcast;
@@ -51,12 +51,12 @@ public class TelepadStationActivity extends FragmentActivity implements OnStatio
 	private Context mContext;
 	private boolean isFullscreen = false;
 	private StationList sList;
-	
+
 	private Window window;
 
 	@Override
 	public boolean onKeyDown(int keyCode, KeyEvent event) {
-		Log.e("Fullscreen Test", "isFullscreen: " + isFullscreen);
+//		Log.d("Fullscreen Test", "isFullscreen: " + isFullscreen);
 		if (isFullscreen) {
 			if (KeyEvent.KEYCODE_DPAD_UP == keyCode) {
 				iFullscreenListener.onChangingFullscreen();
@@ -71,16 +71,23 @@ public class TelepadStationActivity extends FragmentActivity implements OnStatio
 				iFullscreenListener.onChangingFullscreen();
 				isFullscreen = !isFullscreen;
 			}
-			
+
 			mHandler.removeCallbacks(mRunnable);
 			LayoutParams layoutpars = window.getAttributes();
-			layoutpars.screenBrightness = 255 / (float)255;
+			layoutpars.screenBrightness = 255 / (float) 255;
 			window.setAttributes(layoutpars);
-			
+
 			//set fullscreen again
 //			mHandler.removeCallbacks(mRunnable);
 //			mHandler.postDelayed(mRunnable, 5000);
 		}
+
+		if (KeyEvent.KEYCODE_MEDIA_PLAY_PAUSE == keyCode) {
+			if(mStation!=null){
+				onTogglePlay(mStation);
+			}
+		}
+
 
 		return super.onKeyDown(keyCode, event);
 
@@ -105,8 +112,7 @@ public class TelepadStationActivity extends FragmentActivity implements OnStatio
 		Station temp = intent.getParcelableExtra(getString(R.string.radiothek_bundle_station));
 		if (intent.hasExtra(getString(R.string.radiothek_bundle_station))) {
 			if (Globals.current_station != null) {// any station was playing
-				if (temp.getId() != Globals.current_station.getId()) {// new//
-																		// station
+				if (temp.getId() != Globals.current_station.getId()) {// new station
 					mStation = intent.getParcelableExtra(getString(R.string.radiothek_bundle_station));
 					sList = intent.getParcelableExtra(getString(R.string.radiothek_bundle_stationlistparcelable));
 					Globals.current_station = mStation;
@@ -129,8 +135,7 @@ public class TelepadStationActivity extends FragmentActivity implements OnStatio
 			}
 		}
 
-		mStationDetailFragment = (TelepadStationDetailFragment) getSupportFragmentManager().findFragmentById(
-				R.id.telepad_fg_stationdetail);
+		mStationDetailFragment = (TelepadStationDetailFragment) getSupportFragmentManager().findFragmentById(R.id.telepad_fg_stationdetail);
 		iFullscreenListener = mStationDetailFragment;
 
 		mCover = (SquareImageView) findViewById(R.id.telepad_iv_station_cover);
@@ -160,12 +165,12 @@ public class TelepadStationActivity extends FragmentActivity implements OnStatio
 		mBroadcast.addListener(this);
 		registerReceiver(mBroadcast.getReceiver(), mBroadcast.getIntentFiler());
 		mBroadcast.requestUpdateFromService();
-		
+
 		window = ((Activity) mContext).getWindow();
-		
-		if(Globals.isPlaying){
+
+		if (Globals.isPlaying) {
 			mHandler.removeCallbacks(mRunnable);
-			mHandler.postDelayed(mRunnable, 30*000);
+			mHandler.postDelayed(mRunnable, 30 * 000);
 		}
 
 	}
@@ -203,9 +208,9 @@ public class TelepadStationActivity extends FragmentActivity implements OnStatio
 		i.setAction(getString(R.string.radiothek_mediaplayerservice_playstream));
 		i.putExtra(getString(R.string.radiothek_bundle_station), station);
 		startService(i);
-		
+
 		LayoutParams layoutpars = window.getAttributes();
-		layoutpars.screenBrightness = 255 / (float)255;
+		layoutpars.screenBrightness = 255 / (float) 255;
 		window.setAttributes(layoutpars);
 	}
 
@@ -233,9 +238,9 @@ public class TelepadStationActivity extends FragmentActivity implements OnStatio
 			Globals.isPlaying = true;
 			Globals.current_station = station;
 		}
-		
+
 		mHandler.removeCallbacks(mRunnable);
-		mHandler.postDelayed(mRunnable, 30000);
+		mHandler.postDelayed(mRunnable, 30 * 1000);
 
 	}
 
@@ -245,22 +250,23 @@ public class TelepadStationActivity extends FragmentActivity implements OnStatio
 			mStationDetailFragment.setPlayButton(false);
 			mStation.setPlaying(false);
 			Globals.isPlaying = false;
-			
+
 			mHandler.removeCallbacks(mRunnable);
 			LayoutParams layoutpars = window.getAttributes();
-			layoutpars.screenBrightness = 255 / (float)255;
+			layoutpars.screenBrightness = 255 / (float) 255;
 			window.setAttributes(layoutpars);
 		}
 	}
 
 	@Override
 	public void onCurrentlyPlaying(Station station) {
+
 	}
 
 	@Override
 	public void onErrorPlaying(Station station, int errorCode) {
 		onStoppedPlayingStation(station);
-		Log.d("Nexxoo_TalePad_Radiotheque","play stream, and get error.");
+		Log.d("Nexxoo_TalePad_Radiotheque", "play stream, and get error.");
 		final AlertDialog mAlertDialog = new AlertDialog.Builder(mContext).create();
 		mAlertDialog.show();
 		Window window = mAlertDialog.getWindow();
@@ -277,6 +283,6 @@ public class TelepadStationActivity extends FragmentActivity implements OnStatio
 		});
 
 	}
-	
-	
+
+
 }

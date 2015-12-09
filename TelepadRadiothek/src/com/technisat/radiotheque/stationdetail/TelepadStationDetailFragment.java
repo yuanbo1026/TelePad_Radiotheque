@@ -1,7 +1,6 @@
 package com.technisat.radiotheque.stationdetail;
 
 import android.app.Activity;
-import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
@@ -9,7 +8,6 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.preference.PreferenceManager;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -73,7 +71,8 @@ public class TelepadStationDetailFragment extends Fragment implements IFullscree
 	private Window window;
 	
 	private Handler mHandler;
-	private Runnable mRunnable;
+	private Runnable mBrightnessRunnable;
+	private Runnable mFullscreenRunnable;
 
 	public Boolean getisFullscreen() {
 		return isFullscreen;
@@ -122,11 +121,18 @@ public class TelepadStationDetailFragment extends Fragment implements IFullscree
 		window = ((Activity) mContext).getWindow();
 		
 		mHandler = new Handler();
-		mRunnable = new Runnable() {
+		mBrightnessRunnable = new Runnable() {
 			public void run() {
 				LayoutParams layoutpars = window.getAttributes();
 				layoutpars.screenBrightness = 20 / (float)255;
 				window.setAttributes(layoutpars);
+			}
+		};
+
+		mFullscreenRunnable = new Runnable() {
+			public void run() {
+				isFullscreen = false;
+				onChangingFullscreen();
 			}
 		};
 	}
@@ -469,13 +475,14 @@ public class TelepadStationDetailFragment extends Fragment implements IFullscree
 	public void onDetach() {
 		super.onDetach();
 		mListener = null;
-		mHandler.removeCallbacks(mRunnable);
+		mHandler.removeCallbacks(mBrightnessRunnable);
+		mHandler.removeCallbacks(mFullscreenRunnable);
 	}
 
 	public interface OnStationDetailListener {
-		public void onTogglePlay(Station station);
+		void onTogglePlay(Station station);
 
-		public void onNewStation(Station station);
+		void onNewStation(Station station);
 	}
 
 	@Override
@@ -485,17 +492,23 @@ public class TelepadStationDetailFragment extends Fragment implements IFullscree
 			rl_stationdetail.setVisibility(View.GONE);
 			rl_fullscreen.setVisibility(View.VISIBLE);
 			
-			
-			mHandler.removeCallbacks(mRunnable);
-			mHandler.postDelayed(mRunnable, 300000);
+			mHandler.removeCallbacks(mBrightnessRunnable);
+			/* from 300s to 3s  */
+			mHandler.postDelayed(mBrightnessRunnable, 30*1000);
+
+			mHandler.removeCallbacks(mFullscreenRunnable);
 		} else {
 			rl_stationdetail.setVisibility(View.VISIBLE);
 			rl_fullscreen.setVisibility(View.GONE);
 			
-			mHandler.removeCallbacks(mRunnable);
+			mHandler.removeCallbacks(mBrightnessRunnable);
+
 			LayoutParams layoutpars = window.getAttributes();
 			layoutpars.screenBrightness = 255 / (float)255;
 			window.setAttributes(layoutpars);
+
+			mHandler.removeCallbacks(mFullscreenRunnable);
+			mHandler.postDelayed(mFullscreenRunnable, 30*1000);
 		}
 
 		initUI();
@@ -509,10 +522,13 @@ public class TelepadStationDetailFragment extends Fragment implements IFullscree
 		setPlayButton(mCurrentStation.isPlaying());
 		mIvPlayButton.requestFocus();
 		
-		mHandler.removeCallbacks(mRunnable);
+		mHandler.removeCallbacks(mBrightnessRunnable);
 		LayoutParams layoutpars = window.getAttributes();
 		layoutpars.screenBrightness = 255 / (float)255;
 		window.setAttributes(layoutpars);
+
+		mHandler.removeCallbacks(mFullscreenRunnable);
+		mHandler.postDelayed(mFullscreenRunnable, 30*1000);
 	}
 
 }

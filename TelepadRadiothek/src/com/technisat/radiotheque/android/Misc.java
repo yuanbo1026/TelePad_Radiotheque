@@ -1,16 +1,15 @@
 package com.technisat.radiotheque.android;
 
-import java.util.Random;
-
 import android.content.Context;
 import android.graphics.Typeface;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
-
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 import com.technisat.telepadradiothek.R;
+
+import java.util.Random;
 
 public class Misc {
 	
@@ -90,16 +89,17 @@ public class Misc {
 	public static final int FONT_BOLD = 1;
 	public static final int FONT_LIGHT = 2;
 	
-	public static Typeface getCustomFont(Context ctx, int style){		
-		switch (style) {
-		case FONT_NORMAL:
-			return Typeface.createFromAsset(ctx.getAssets(), "Kelson Sans Regular.otf");
-		case FONT_BOLD:
-			return Typeface.createFromAsset(ctx.getAssets(), "Kelson Sans Bold.otf");
-		case FONT_LIGHT:
-			return Typeface.createFromAsset(ctx.getAssets(), "Kelson Sans Light.otf");
+	public static Typeface getCustomFont(Context ctx, int style){
+		if(ctx!=null){
+			switch (style) {
+				case FONT_NORMAL:
+					return Typeface.createFromAsset(ctx.getAssets(), "Kelson Sans Regular.otf");
+				case FONT_BOLD:
+					return Typeface.createFromAsset(ctx.getAssets(), "Kelson Sans Bold.otf");
+				case FONT_LIGHT:
+					return Typeface.createFromAsset(ctx.getAssets(), "Kelson Sans Light.otf");
+			}
 		}
-
 		return null;
 	}
 	

@@ -56,7 +56,7 @@ public class TelepadDisplayStationListActivity extends FragmentActivity implemen
 	private StationList sList;
 	private ImageView mImageView;
 
-	private Boolean isGreenStyle;
+	private boolean isGreenStyle;
 	private boolean isSizeBig;
 	private Context mContext;
 
@@ -288,7 +288,7 @@ public class TelepadDisplayStationListActivity extends FragmentActivity implemen
 				}
 			});
 
-			if (mProgressBar != null && mProgressBar.isShowing()) mProgressBar.hide();
+			if (mProgressBar != null && mProgressBar.isShowing()) mProgressBar.dismiss();
 		}
 	}
 
@@ -331,6 +331,7 @@ public class TelepadDisplayStationListActivity extends FragmentActivity implemen
 		if (mMyDrawer != null) mMyDrawer.finalize();
 		// unregisterReceiver(mBroadcast.getReceiver());
 		super.onDestroy();
+		mProgressBar= null;
 	}
 
 	@Override
@@ -399,7 +400,7 @@ public class TelepadDisplayStationListActivity extends FragmentActivity implemen
 			i.setAction(getString(R.string.radiothek_action_search_done));
 			i.putExtra(getString(R.string.radiothek_bundle_stationlistparcelable), new StationList(stationList));
 			handleIntent(i);
-			mProgressBar.hide();
+			mProgressBar.dismiss();
 		}
 	}
 

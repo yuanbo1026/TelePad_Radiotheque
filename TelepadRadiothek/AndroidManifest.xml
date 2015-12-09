@@ -4,10 +4,12 @@
     android:installLocation="preferExternal"
     android:versionCode="4"
     android:versionName="1.0.4" >
-    <!-- version 1.0.4
+    <!-- internal version 1.0.5, published version 1.0.4
      update:
      1. add spinner for list loading
      2. add error alert dialog for error stream playing
+     3. fix the coding issue, use both UTF-8 and ISO-8859-1
+     4. adapt genre information text view width
      -->
 
     <uses-permission android:name="android.permission.INTERNET" />

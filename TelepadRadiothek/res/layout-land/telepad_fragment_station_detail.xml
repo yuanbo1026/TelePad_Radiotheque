@@ -121,10 +121,11 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:ellipsize="end"
-                android:maxLength="20"
                 android:singleLine="true"
                 android:text="U2 - Where the streets have"
                 android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
                 android:textColor="@color/station_detail_text_color"
                 android:textSize="35sp" />
         </LinearLayout>
@@ -249,7 +250,8 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:text="@string/playerfragment.text.loading"
-                android:maxLength="30"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:textColor="@color/RadiothekWhite"
                 android:textSize="40sp" />
@@ -260,7 +262,8 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:ellipsize="end"
-                android:maxLength="20"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
                 android:singleLine="true"
                 android:text="@string/playerfragment.text.loading"
                 android:textAppearance="?android:attr/textAppearanceSmall"
